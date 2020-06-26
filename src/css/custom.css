@@ -1,0 +1,92 @@
+:root {
+	--sidebar-width: 15%;
+	--sidebar-transition-speed: 0.3s;
+}
+
+/* width */
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: #555;
+}
+
+#openNav {
+	position: fixed;
+}
+
+#mySidebar {
+	z-index: 100;
+}
+
+#sidebar-wrapper {
+	margin: 0;
+	padding: 0;
+	position: fixed;
+	height: 100%;
+	overflow: auto;
+}
+
+#sidebar-wrapper ul {
+	display: block;
+}
+
+/* #sidebar-wrapper #sidebar-brand{
+    background: rgb(74, 74, 74);
+} */
+
+#sidebar-wrapper li a {
+	display: block;
+	color: #fff;
+	padding: 8px 16px;
+	text-decoration: none;
+}
+
+#sidebar-wrapper li:not(#sidebar-brand) a:hover {
+	background-color: #637689;
+}
+
+#validation * {
+	font-size: 1rem;
+}
+
+.sidebar-show {
+	display: block;
+	width: var(--sidebar-width);
+	opacity: 1;
+	transition: opacity var(--sidebar-transition-speed);
+}
+
+.sidebar-hide {
+	display: none;
+	width: 0%;
+	opacity: 0;
+	transition: opacity var(--sidebar-transition-speed);
+}
+
+.main-normal {
+	margin-left: 0%;
+	transition: all var(--sidebar-transition-speed);
+}
+
+.main-slide {
+	margin-left: var(--sidebar-width);
+	transition: all var(--sidebar-transition-speed);
+}
+
+hr {
+	height: 2px;
+	background-color: white;
+}
